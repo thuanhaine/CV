@@ -1,7 +1,21 @@
 const $$ = document.querySelectorAll.bind(document)
-
+const $ = document.querySelector.bind(document)
 const ratings = $$(".fa-regular.fa-square")
 
+
+const btnNavList = document.querySelectorAll(".nav__list-item")
+btnNavList.forEach((btnNav,index) => {
+     btnNav.onclick = () => {
+          const ListPage = document.querySelectorAll(".webpage")
+          // console.log(ListPage);
+
+          // console.log(ListPage[index]);
+          ListPage.forEach(Page => Page.classList.remove("show"))
+          ListPage[index].classList.add("show");
+
+          
+     }
+});
 
 ratings.forEach((rating, index) => {
     var indexActive = -1;

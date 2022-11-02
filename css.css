@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html {
     font-size: 18px;
@@ -21,15 +22,54 @@ ul {
 
 }
 
- /* HEADER  */
- /* HEADER  */
-header {
-    margin:0 25%;
+/* NAV  */
+/* NAV  */
+/* NAV  */
+body {
+    display: flex;
+}
+.app {
+    margin:0 10%;
+    width: 70%;
 
+}
+.nav {
+ width: 300px;
+ height: 100px;
+ margin: 100px 0 0 32px;
+ background-color: black;
+}
+.nav__list {
+    display: fixed;
+}
+.nav__list-item {
+
+    text-align: center;
+
+}
+.nav__list-item-link:hover {
+    background-color: #ccc;
+cursor: pointer;
+    color: black;
+}
+.nav__list-item-link {
+    width: 100%;
+    padding: 8px;
+    display: block;
+    font-size: 32px;
+    background-color: black;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+ /* HEADER  */
+ /* HEADER  */
+ .heading {
     flex: 1;
     text-align: center;
     margin: 32px 16px 32px 32px;
-    margin:0 25%;
+    display: none;
 }
 .title {
     margin-bottom: 12px;
@@ -65,8 +105,9 @@ header {
 article {
     flex: 1;
     background-color: #f3efe0;
-    margin: 32px 25%;
+    margin: 32px 0;
     padding: 16px;
+    display: none;
 }
 .educations {
     padding-top: 32px;
@@ -93,7 +134,8 @@ article {
 /* MORE  */
 
 .more {
-    margin:0 25%;
+    display: none;
+
 }
 
 .abilities__skills {
@@ -161,6 +203,7 @@ article {
 
 
 footer {
+    display: none;
     margin: 32px auto 0;
     height: 16px;
     width: 95%;
@@ -170,3 +213,21 @@ footer {
 i {
     background-color: #22a3a0;
 }
+
+.show {
+    display: block;
+    animation-name: slidein;
+    animation-duration: 1s;
+}
+
+
+
+@keyframes slidein {
+    from {
+      margin-left: 50%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+  }
